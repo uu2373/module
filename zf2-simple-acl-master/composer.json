@@ -1,0 +1,34 @@
+{
+    "name": "milcrew/zf2-simple-acl",
+    "description": "ACL",
+    "authors": [
+        {
+            "name": "Milcrew",
+            "email": "milcrew@gmail.com"
+        },
+        {
+            "name": "Milotskiy Alexey",
+            "email": "spalaxinco@gmail.com"
+        }
+    ],
+    "keywords": [
+        "acl"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3",
+        "zendframework/zendframework": ">=2.0.0",
+        "doctrine/doctrine-module": ">=0.7.2",
+        "doctrine/doctrine-orm-module": ">=0.7.0",
+        "zf-commons/zfc-user": ">=0.1.2"
+    },
+    "autoload": {
+        "psr-0": {
+            "Zf2SimpleAcl": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    },
+    "minimum-stability": "dev"
+}

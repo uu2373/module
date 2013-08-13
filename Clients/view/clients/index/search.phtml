@@ -1,0 +1,17 @@
+<?php
+if (isset($form)){
+$form->setAttribute('action', $this->url('clients'))->prepare();
+$form->setAttribute('class', 'form-inline');
+
+echo $this->form()->openTag($form);
+
+//$product = $form->get('search');
+
+//echo $this->formRow();
+echo $this->formCollection($form);
+
+
+echo $this->form()->closeTag();
+}
+?>
+search

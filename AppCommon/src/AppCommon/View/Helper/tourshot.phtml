@@ -1,0 +1,25 @@
+<br>
+<div class="box" style="width:90%;margin:10px auto;">
+		<p> <center><%EMPTY_HOT%></center>
+				<table id="box" width="100%" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+				<tr><td style="border-right:1px solid #DDD;border-top:none">&nbsp;</td>
+						<td style="border-right:1px solid #DDD;border-left:1px solid #DDD;">&nbsp;Название&nbsp;</td>
+						<td style="border-right:1px solid #DDD;border-top:none">&nbsp;Даты&nbsp;</td>
+						<td style="border-right:none;border-left:1px solid #DDD;">&nbsp;Стоимость&nbsp;</td></tr>
+
+				<LOOP:TOUR_HOT>
+				   <tr onmouseover="style.backgroundColor='#FFFFFF'" onmouseout="style.backgroundColor='#F1F2ED';status=''" onclick="location='?m=tour/detail/<%TOUR%>';">
+						 <td style="border:1px solid #DDD;border-left:none ;width:34px;padding: 1px" nowrap><%_ISHOTSMALL%></td>
+						 <td style="border:1px solid #DDD;" nowrap><a href="?m=tour/detail/<%TOUR%>"><%TR_NAME%></td>
+						 <td style="border:1px solid #DDD;width: 150px;" nowrap><%DATE%></td>
+						 <td style="border:1px solid #DDD;border-right:none; width: 100px;" nowrap><%COST%></td>
+				   </tr>
+				</LOOP:TOUR_HOT>
+
+				<tr><td style="border-right:1px solid #DDD;border-bottom:none">&nbsp;</td>
+						<td style="border-right:1px solid #DDD;border-left:1px solid #DDD;">&nbsp;</td>
+						<td style="border-right:1px solid #DDD;border-bottom:none">&nbsp;</td>
+						<td style="border-right:none; border-bottom:none">&nbsp;</td></tr>
+				</table>
+		</p>
+</div>

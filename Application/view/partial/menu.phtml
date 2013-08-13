@@ -1,0 +1,13 @@
+
+<?php echo "\n<!-- MENU -->\n"?>
+
+<?php
+foreach ($this->container as $page) {
+	$res="<li>". $this->navigation()->menu()->htmlify($page).'</li>';
+	//$res=str_replace('">','"><span>',$res);
+  //$res=str_replace('</','</span></',$res);
+	echo $res,PHP_EOL;
+}
+?>
+
+<?php echo "<!-- /MENU -->\n"?>

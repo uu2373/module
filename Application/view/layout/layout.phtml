@@ -1,0 +1,235 @@
+<?php echo $this->doctype() . "\n"; ?>
+<?php
+$this->headMeta()->appendHttpEquiv('Content-Type', 'text/html;charset=utf-8');
+$this->headTitle()->setSeparator(' - ');
+$this->headTitle('Zend Framework Tutorial');
+?>
+
+<html>
+ <head>
+<?php
+$this->headLink()->appendStylesheet($this->basePath('/css/styles.css'));
+$this->headLink()->appendStylesheet($this->basePath('/css/menu.css'));
+//$this->headLink()->appendStylesheet($this->basePath('/css/bootstrap.css'));
+//$this->headLink()->appendStylesheet('http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css');
+?>
+
+<style>
+  .form-signin {
+        max-width: 600px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      .form-signin .form-signin-heading {
+        margin-bottom: 10px;
+      }
+ .form-signin input[type="text"],
+ .form-signin input[type="password"] {
+   font-size: 16px;
+   _height: auto;
+   _margin-bottom: 15px;
+   _padding: 7px 9px;
+  }
+
+
+.form-inline{
+ display:block;
+
+}
+
+body{
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+form span, form input, form button, form select, form textarea {
+font-size: 16px;
+font-weight: normal;
+line-height: 20px;
+}
+
+
+form label {
+
+
+ margin-bottom:20px;
+}
+form.form-signin label{
+  display:block;
+  width: 500px;
+}
+
+form.form-signin span{
+  display:block;
+  width: 160px;
+}
+
+
+
+
+form label span {
+float: left;
+__width: 160px;
+padding: 4px 6px;
+padding-right: 15px;
+text-align: right;
+_font-size: 14px;
+font-weight: normal;
+line-height: 20px;
+display: block;
+_margin-bottom: 5px;
+vertical-align: middle;
+}
+
+form label input{
+height: 20px;
+padding: 4px 6px;
+font-size: 14px;
+line-height: 20px;
+background-color: #ffffff;
+border: 1px solid #cccccc;
+width: 160px;
+vertical-align: middle;
+}
+
+
+form input[type=checkbox]{
+margin: 4px 0 0;
+
+display: inline-block;
+margin-bottom: 0;
+vertical-align: middle;
+
+
+width: 19px;
+height: 25px;
+padding: 0px 5px 0px 0px;
+background: url(/css/checkbox.gif) no-repeat;
+_display: block;
+_clear: left;
+_float: left;
+
+
+
+
+
+}
+
+
+
+form input[type=submit]{
+
+
+padding: 4px 12px;
+margin-left:10px;
+margin-bottom: 0;
+_font-size: 14px;
+line-height: 20px;
+color: #333333;
+_text-align: center;
+text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+vertical-align: middle;
+cursor: pointer;
+background-color: #f5f5f5;
+background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+background-repeat: repeat-x;
+border: 1px solid #bbbbbb;
+border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+border-bottom-color: #a2a2a2;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+form.form-signin input[type=submit]{
+ margin-left:230px;
+ display: inline-block;
+
+}
+
+
+
+input, button, select, textarea {
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
+</style>
+
+
+
+<?php
+echo $this->headMeta();
+echo $this->headTitle();
+echo $this->headStyle();
+echo $this->headLink();
+echo $this->headScript();
+?>
+
+  <?php /*
+    if ($this->JQuery()->isEnabled())
+    echo $this->JQuery()
+    ->uiEnable()
+    ->setLocalPath($this->basePath('/js/jquery/jquery.min.js'))
+    ->setUiLocalPath($this->basePath('/js/jquery/jquery-ui.min.js'))
+    ->addStylesheet('/js/jquery/jquery-ui-1.7.3.custom.css');
+   */
+  ?>
+
+
+ </head>
+ <body class="claro">
+  <div id="page">
+   <div id="header"> &nbsp;</div>
+
+
+<div>
+<?php
+//echo $this->navigation()->menu()->setPartial(array('menu.phtml', 'default'))->render();
+echo $this->navigation('navigation')->menu()->render();
+//echo $this->navigation;
+?>
+</div>
+
+   <div id="wrap">
+
+    <div id="content">
+      <?php echo $this->layout()->content; ?>
+    </div>
+
+
+
+   </div>
+
+  </div>
+
+
+  <div id="footer">
+
+   <div style="float:right; margin:0px 0px; font-family: Arial,Helvetica,sans-serif;font-size: 11px; text-decoration: none;">
+    2010-2012 &copy;<a href="mailto:billing@telesystems.ua">&nbsp;ООО «Телесистемы Украины»</a>
+   </div>
+
+
+
+  </div>
+ </body>
+</html>
