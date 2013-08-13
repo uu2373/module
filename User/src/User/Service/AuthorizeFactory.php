@@ -6,16 +6,16 @@ use Zend\ServiceManager\ServiceLocatorInterface;
 
 
 /**
- * Factory responsible of building the {@see \BjyAuthorize\Service\Authorize} service
+ *  Фабрика для авторизации
  *
- * @author Ben Youngblood <bx.youngblood@gmail.com>
+ * @author Shvager Alexander <shvager@mail.ru>
  */
 class AuthorizeFactory implements FactoryInterface
 {
     /**
      * {@inheritDoc}
      *
-     * @return \BjyAuthorize\Service\Authorize
+     * @return \User\Service\Authorize
      */
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
