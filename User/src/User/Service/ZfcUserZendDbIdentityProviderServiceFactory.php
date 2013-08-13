@@ -33,7 +33,7 @@ class ZfcUserZendDbIdentityProviderServiceFactory implements FactoryInterface
         $userService = $serviceLocator->get('zfcuser_user_service');
         $config      = $serviceLocator->get('User\Config');
 
-        $provider = new ZfcUserZendDb($adapter, $userService);
+        $provider = new UserZendDb($adapter, $userService);
 
         $provider->setDefaultRole($config['default_role']);
 

@@ -16,8 +16,8 @@ return array(
             'User\Guard\Controller' =>   'User\Service\ControllerGuardServiceFactory',
             'User\Service\Authorize'=>   'User\Service\AuthorizeFactory',
             'User\Service\Provider'=>    'User\Service\IdentityProviderServiceFactory',
-            
             'User\Provider\Identity\ProviderInterface'=>'User\Service\ZfcUserZendDbIdentityProviderServiceFactory',
+            //'' =>'Zend\Authentication\AuthenticationService',
             
             
             'User\Acl\Acl' => 'User\Acl\Acl',
