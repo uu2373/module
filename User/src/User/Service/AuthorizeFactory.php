@@ -16,6 +16,7 @@ class AuthorizeFactory implements FactoryInterface
      * {@inheritDoc}
      *
      * @return \User\Service\Authorize
+     * ветка user
      */
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
