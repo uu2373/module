@@ -3,11 +3,6 @@
  * File for Acl Class
  *
  * @category  User
- * @package   User_Acl
- * @author    Marco Neumann <webcoder_at_binware_dot_org>
- * @copyright Copyright (c) 2011, Marco Neumann
- * @license   http://binware.org/license/index/type:new-bsd New BSD License
- * http://p0l0.binware.org/index.php/2012/02/18/zend-framework-2-authentication-acl-using-eventmanager/
  */
 
 /**
@@ -24,9 +19,6 @@ namespace Auth\Acl;
 use Zend\Permissions\Acl\Acl as ZendAcl,
     Zend\Permissions\Acl\Role\GenericRole as Role,
     Zend\Permissions\Acl\Resource\GenericResource as Resource;
-// use Zend\Acl\Acl as ZendAcl,
-//    Zend\Acl\Role\GenericRole as Role,
-//    Zend\Acl\Resource\GenericResource as Resource;
 
 /**
  * Class to handle Acl
@@ -34,9 +26,7 @@ use Zend\Permissions\Acl\Acl as ZendAcl,
  * This class is for loading ACL defined in a config
  *
  * @category User
- * @package  User_Acl
- * @copyright Copyright (c) 2011, Marco Neumann
- * @license   http://binware.org/license/index/type:new-bsd New BSD License
+ * @package  User\Acl
  */
 class Acl extends ZendAcl {
     /**
@@ -51,8 +41,7 @@ class Acl extends ZendAcl {
      * @return void
      * @throws \Exception
      */
-    public function __construct($config)
-    {
+    public function __construct($config) {
         if (!isset($config['roles']) || !isset($config['resources'])) {
             throw new \Exception('Invalid ACL Config found');
         }
@@ -62,8 +51,7 @@ class Acl extends ZendAcl {
             $roles[self::DEFAULT_ROLE] = '';
         }
 
-        $this->_addRoles($roles)
-             ->_addResources($config['resources']);
+        $this->_addRoles($roles)->_addResources($config['resources']);
     }
 
     /**
